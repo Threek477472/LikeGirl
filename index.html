@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我们的纪念日</title>
+    <style>
+        body { 
+            display: flex; flex-direction: column; align-items: center; justify-content: center; 
+            height: 100vh; margin: 0; background-color: #fff0f5; font-family: 'PingFang SC', sans-serif; 
+        }
+        h1 { color: #ff6b81; }
+        #time { font-size: 28px; color: #ff4757; font-weight: bold; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>我们的故事开始于</h1>
+    <div id="time">加载中...</div>
+
+    <script>
+        function updateTime() {
+            // 请修改下面这一行日期
+            var start = new Date(2023, 8, 20, 12, 0, 0); 
+            var now = new Date();
+            var diff = now - start;
+            var d = Math.floor(diff / 86400000);
+            var h = Math.floor((diff % 86400000) / 3600000);
+            var m = Math.floor((diff % 3600000) / 60000);
+            var s = Math.floor((diff % 60000) / 1000);
+            document.getElementById("time").innerHTML = d + " 天 " + h + " 小时 " + m + " 分 " + s + " 秒";
+        }
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
