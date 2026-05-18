@@ -3,24 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我们的纪念日</title>
+    <title>我们的专属纪念日</title>
     <style>
-        body { 
-            display: flex; flex-direction: column; align-items: center; justify-content: center; 
-            height: 100vh; margin: 0; background-color: #fff0f5; font-family: 'PingFang SC', sans-serif; 
-        }
+        body { background-color: #fff0f5; font-family: 'PingFang SC', sans-serif; text-align: center; padding: 20px; }
         h1 { color: #ff6b81; }
-        #time { font-size: 28px; color: #ff4757; font-weight: bold; margin-top: 20px; }
+        #time { font-size: 24px; color: #ff4757; font-weight: bold; margin: 20px 0; }
+        .timeline { max-width: 600px; margin: 0 auto; }
+        .content { background: white; padding: 20px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .date-label { font-weight: bold; color: #ff6b81; margin-bottom: 10px; }
+        img { width: 100%; border-radius: 10px; margin-top: 10px; }
     </style>
 </head>
 <body>
-    <h1>我们的故事开始于</h1>
+
+    <h1>我们在一起啦</h1>
     <div id="time">加载中...</div>
+
+    <div class="timeline">
+        <!-- 第一个相册点 -->
+        <div class="content">
+            <div class="date-label">2025.11.17</div>
+            <p>故事开始的地方</p>
+            <!-- 替换下面这行 src 中的链接 -->
+            <img src="https://raw.githubusercontent.com/你的用户名/like-girl/master/images/你的照片名.jpg" alt="我们的照片">
+        </div>
+    </div>
 
     <script>
         function updateTime() {
-            // 请修改下面这一行日期
-            var start = new Date(2025, 11, 17, 20, 0, 0); 
+            // 这是你的起始时间
+            var start = new Date(2025, 10, 17, 20, 0, 0); 
             var now = new Date();
             var diff = now - start;
             var d = Math.floor(diff / 86400000);
